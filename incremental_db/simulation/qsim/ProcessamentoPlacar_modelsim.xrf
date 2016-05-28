@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Rafael/Documents/Quartus/ProcessamentoPlacar.v
+source_file = 1, C:/Users/Rafael/Documents/Quartus/Waveform.vwf
+source_file = 1, C:/Users/Rafael/Documents/Quartus/DiferencaEuclidiana.v
+source_file = 1, C:/Users/Rafael/Documents/Quartus/MenorDistancia.v
+source_file = 1, C:/Users/Rafael/Documents/Quartus/db/ProcessamentoPlacar.cbx.xml
+design_name = ProcessamentoPlacar
+instance = comp, \numero[0]~output , numero[0]~output, ProcessamentoPlacar, 1
+instance = comp, \numero[1]~output , numero[1]~output, ProcessamentoPlacar, 1
+instance = comp, \numero[2]~output , numero[2]~output, ProcessamentoPlacar, 1
+instance = comp, \numero[3]~output , numero[3]~output, ProcessamentoPlacar, 1
+instance = comp, \numero[4]~output , numero[4]~output, ProcessamentoPlacar, 1
+instance = comp, \numero[5]~output , numero[5]~output, ProcessamentoPlacar, 1
+instance = comp, \numero[6]~output , numero[6]~output, ProcessamentoPlacar, 1
+instance = comp, \numero[7]~output , numero[7]~output, ProcessamentoPlacar, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, ProcessamentoPlacar, 1

@@ -1,0 +1,37 @@
+module ProcessamentoDigito(
+	input  [7:0] numero[3:1][10:0][10:0],
+	output [3:0] digito
+	);
+	
+	wire [31:0] v_diferenca [9:0];
+		
+	diferenca0 Diferenca0(numero,v_diferenca[0]);
+	diferenca1 Diferenca1(numero,v_diferenca[1]);
+	diferenca2 Diferenca2(numero,v_diferenca[2]);
+	diferenca3 Diferenca3(numero,v_diferenca[3]);
+	diferenca4 Diferenca4(numero,v_diferenca[4]);
+	diferenca5 Diferenca5(numero,v_diferenca[5]);
+	diferenca6 Diferenca6(numero,v_diferenca[6]);
+	diferenca7 Diferenca7(numero,v_diferenca[7]);
+	diferenca8 Diferenca8(numero,v_diferenca[8]);
+	diferenca9 Diferenca9(numero,v_diferenca[9]);
+	
+	assign digito = MenorDistancia(v_diferenca);
+		
+endmodule
+
+function MenorDistancia([31:0] v_diferenca [9:0]);
+	reg [3:0] digito_temp, i;
+	reg [31:0] distancia_min;
+
+	distancia_min = 32'hffffffff;
+	
+	for(i = 0; i < 10; i = i + 1)
+	begin
+		if(distancia[i] < distancia_min)
+		begin
+			distancia_min = distancia[i];
+			MenorDistancia = i;
+		end
+	end
+endfunction

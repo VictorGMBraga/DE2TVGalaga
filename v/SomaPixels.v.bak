@@ -1,0 +1,8 @@
+module SomaPixels(
+	input [15:0] diff_pixel[3:1][10:0][10:0]),
+	output [31:0] soma
+);
+
+	assign soma = SomaDigitos(diff_pixel);
+
+endmodule

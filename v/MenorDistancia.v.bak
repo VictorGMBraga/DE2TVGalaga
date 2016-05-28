@@ -1,0 +1,63 @@
+module MenorDistancia(
+		input			[1:0]			flag_placar,
+		input 		[31:0] 		distancia0,
+		input 		[31:0] 		distancia1,
+		input 		[31:0] 		distancia2,
+		input 		[31:0] 		distancia3,
+		input 		[31:0] 		distancia4,
+		input 		[31:0] 		distancia5,
+		input 		[31:0] 		distancia6,
+		input 		[31:0] 		distancia7,
+		input 		[31:0] 		distancia8,
+		input 		[31:0] 		distancia9,
+		output reg	[3:0] 	   numero
+	);
+	
+always@(flag_placar)
+	begin
+		if(distancia0 < distancia1 && distancia0 < distancia2 && distancia0 < distancia3 && distancia0 < distancia4 && distancia0 < distancia5 && distancia0 < distancia6 && distancia0 < distancia7 && distancia0 < distancia8 && distancia0 < distancia9) 
+		begin
+			numero = 0;
+		end
+		else if(distancia1 < distancia0 && distancia1 < distancia2 && distancia1 < distancia3 && distancia1 < distancia4 && distancia1 < distancia5 && distancia1 < distancia6 && distancia1 < distancia7 && distancia1 < distancia8 && distancia1 < distancia9) 
+		begin
+			numero = 1;
+		end
+		else if(distancia2 < distancia0 && distancia2 < distancia1 && distancia2 < distancia3 && distancia2 < distancia4 && distancia2 < distancia5 && distancia2 < distancia6 && distancia2 < distancia7 && distancia2 < distancia8 && distancia2 < distancia9) 
+		begin
+			numero = 2;
+		end
+		else if(distancia3 < distancia0 && distancia3 < distancia2 && distancia3 < distancia1 && distancia1 < distancia4 && distancia3 < distancia5 && distancia3 < distancia6 && distancia3 < distancia7 && distancia3 < distancia8 && distancia3 < distancia9) 
+		begin
+			numero = 3;
+		end
+		else if(distancia4 < distancia0 && distancia4 < distancia2 && distancia4 < distancia3 && distancia4 < distancia1 && distancia4 < distancia5 && distancia4 < distancia6 && distancia4 < distancia7 && distancia4 < distancia8 && distancia4 < distancia9) 
+		begin
+			numero = 4;
+		end
+		else if(distancia5 < distancia0 && distancia5 < distancia2 && distancia5 < distancia3 && distancia5 < distancia4 && distancia5 < distancia1 && distancia5 < distancia6 && distancia5 < distancia7 && distancia5 < distancia8 && distancia5 < distancia9) 
+		begin
+			numero = 5;
+		end
+		else if(distancia6 < distancia0 && distancia6 < distancia2 && distancia6 < distancia3 && distancia6 < distancia4 && distancia6 < distancia5 && distancia6 < distancia1 && distancia6 < distancia7 && distancia6 < distancia8 && distancia6 < distancia9) 
+		begin
+			numero = 6;
+		end
+		else if(distancia7 < distancia0 && distancia7 < distancia2 && distancia7 < distancia3 && distancia7 < distancia4 && distancia7 < distancia5 && distancia7 < distancia6 && distancia7 < distancia1 && distancia7 < distancia8 && distancia7 < distancia9) 
+		begin
+			numero = 7;
+		end
+		else if(distancia8 < distancia0 && distancia8 < distancia2 && distancia8 < distancia3 && distancia8 < distancia4 && distancia8 < distancia5 && distancia8 < distancia6 && distancia8 < distancia7 && distancia8 < distancia8 && distancia1 < distancia9) 
+		begin
+			numero = 8;
+		end
+		else if(distancia9 < distancia0 && distancia9 < distancia2 && distancia9 < distancia3 && distancia9 < distancia4 && distancia9 < distancia5 && distancia9 < distancia6 && distancia9 < distancia7 && distancia9 < distancia8 && distancia9 < distancia1) 
+		begin
+			numero = 9;
+		end
+		else
+		begin
+			numero = 15;
+		end
+	end
+endmodule
