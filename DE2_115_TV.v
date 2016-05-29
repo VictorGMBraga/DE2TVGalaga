@@ -736,18 +736,14 @@ I2C_AV_Config 	u1	(	//	Host Side
 // GPIO[17]  aciona botao O	- X
 // GPIO[15]  aciona botao Select 
 
-assign	LEDG	=	VGA_Y;
-assign	LEDR	=	VGA_X;
+//assign	LEDG	=	VGA_Y;
+//assign	LEDR	=	VGA_X;
 
 reg flag_placar;
-reg [3:0] pos_atual;
-reg [7:0] numero[7:1][3:1][10:0][10:0];
+reg [7:0] numero[7:1][10:0][10:0];
 wire [3:0] digito[7:1];
-reg [10:0] VGA_X_REL, VGA_Y_REL;
 
 ProcessamentoPlacar proc_plac(numero, digito);
-
-//checkNum(numero);
 
 SEG7_LUT	disp7	(HEX7, digito[7]);
 SEG7_LUT	disp6	(HEX6, digito[6]);
@@ -756,7 +752,7 @@ SEG7_LUT	disp4	(HEX4, digito[4]);
 SEG7_LUT	disp3	(HEX3, digito[3]);
 SEG7_LUT	disp2	(HEX2, digito[2]);
 SEG7_LUT	disp1	(HEX1, digito[1]);
-SEG7_LUT	disp0	(HEX0, KEY[1]);
+SEG7_LUT	disp0	(HEX0, 0);
 
 always@(*) begin
 
@@ -765,93 +761,42 @@ always@(*) begin
 	VGA_G = vga_g10[9:2];
 	VGA_B = vga_b10[9:2];
 	
-	// ESTA NO PLACAR
-	if(VGA_Y > 37 && VGA_Y < 49 && VGA_X > 143 && VGA_X < 227)
+	// POSICAO 7
+	if(VGA_Y > 37 && VGA_Y < 49 && VGA_X > 143 && VGA_X < 155)
 	begin
-		// POSICAO 7
-		if(VGA_X > 143 && VGA_X < 155)
-		begin
-			pos_atual = 7;
-			VGA_X_REL = VGA_X-144;
-		end
-		// POSICAO 6
-		else if(VGA_X > 155 && VGA_X < 167)
-		begin
-			pos_atual = 6;
-			VGA_X_REL = VGA_X-156;
-		end
-		// POSICAO 5
-		else if(VGA_X > 167 && VGA_X < 179)
-		begin
-			pos_atual = 5;
-			VGA_X_REL = VGA_X-168;
-		end
-		// POSICAO 4
-		else if(VGA_X > 179 && VGA_X < 191)
-		begin
-			pos_atual = 4;
-			VGA_X_REL = VGA_X-180;
-		end
-		// POSICAO 3
-		else if(VGA_X > 191 && VGA_X < 203)
-		begin
-			pos_atual = 3;
-			VGA_X_REL = VGA_X-192;
-		end
-		// POSICAO 2
-		else if(VGA_X > 203 && VGA_X < 215)
-		begin
-			pos_atual = 2;
-			VGA_X_REL = VGA_X-204;
-		end
-		// POSICAO 1
-		else if(VGA_X > 215 && VGA_X < 227)
-		begin
-			pos_atual = 1;
-			VGA_X_REL = VGA_X-216;
-		end
-		else
-		begin
-			pos_atual = 0;
-		end
-		
-		if(pos_atual != 0)
-		begin
-		
-			VGA_Y_REL = VGA_Y-38;
-			
-			numero[pos_atual][1][VGA_Y_REL][VGA_X_REL] = VGA_R;
-			numero[pos_atual][2][VGA_Y_REL][VGA_X_REL] = VGA_G;
-			numero[pos_atual][3][VGA_Y_REL][VGA_X_REL] = VGA_B;
-			
-			if( (VGA_X_REL == 1 && VGA_Y_REL == 1) ||
-				 (VGA_X_REL == 1 && VGA_Y_REL == 5) ||
-				 (VGA_X_REL == 1 && VGA_Y_REL == 9) ||
-				 (VGA_X_REL == 5 && VGA_Y_REL == 1) ||
-				 (VGA_X_REL == 5 && VGA_Y_REL == 5) ||
-				 (VGA_X_REL == 5 && VGA_Y_REL == 9) ||
-				 (VGA_X_REL == 9 && VGA_Y_REL == 1) ||
-				 (VGA_X_REL == 9 && VGA_Y_REL == 5) ||
-				 (VGA_X_REL == 9 && VGA_Y_REL == 9) )
-			begin
-				VGA_R = 8'hFF;
-				VGA_G = 8'h08;
-				VGA_B = 8'h7F;
-			end
-			
-			
-		
-			// CONTORNO DO DIGITO
-			if(VGA_X_REL == 0 || VGA_X_REL == 10 || VGA_Y_REL == 0 || VGA_Y_REL == 10)
-			begin
-				//VGA_R = 8'hFF;
-				//VGA_G = 8'h08;
-				//VGA_B = 8'h7F;
-			end
-		
-		end
-	
+		numero[7][VGA_Y-38][VGA_X-144] = VGA_R;
 	end
+	// POSICAO 6
+	else if(VGA_Y > 37 && VGA_Y < 49 && VGA_X > 155 && VGA_X < 167)
+	begin
+		numero[6][VGA_Y-38][VGA_X-156] = VGA_R;
+	end
+	// POSICAO 5
+	else if(VGA_Y > 37 && VGA_Y < 49 && VGA_X > 167 && VGA_X < 179)
+	begin
+		numero[5][VGA_Y-38][VGA_X-168] = VGA_R;
+	end
+	// POSICAO 4
+	else if(VGA_Y > 37 && VGA_Y < 49 && VGA_X > 179 && VGA_X < 191)
+	begin
+		numero[4][VGA_Y-38][VGA_X-180] = VGA_R;
+	end
+	// POSICAO 3
+	else if(VGA_Y > 37 && VGA_Y < 49 && VGA_X > 191 && VGA_X < 203)
+	begin
+		numero[3][VGA_Y-38][VGA_X-192] = VGA_R;
+	end
+	// POSICAO 2
+	else if(VGA_Y > 37 && VGA_Y < 49 && VGA_X > 203 && VGA_X < 215)
+	begin
+		numero[2][VGA_Y-38][VGA_X-204] = VGA_R;
+	end
+	// POSICAO 1
+	else if(VGA_Y > 37 && VGA_Y < 49 && VGA_X > 215 && VGA_X < 227)
+	begin
+		numero[1][VGA_Y-38][VGA_X-216] = VGA_R;
+	end
+		
 end
 
 endmodule

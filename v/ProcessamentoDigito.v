@@ -1,10 +1,10 @@
 module ProcessamentoDigito(
-	input  [7:0] numero[3:1][10:0][10:0],
+	input  [7:0] numero[10:0][10:0],
 	output [3:0] digito
-	);
+);
 	
-	wire [31:0] v_diferenca[9:0];
-	wire [15:0] diff_pixel[9:0][3:1][10:0][10:0];
+	wire [15:0] v_diferenca[9:0];
+	wire [7:0] diff_pixel[9:0][10:0][10:0];
 		
 	Diferenca0 diferenca0(numero,diff_pixel[0]);
 	Diferenca1 diferenca1(numero,diff_pixel[1]);
