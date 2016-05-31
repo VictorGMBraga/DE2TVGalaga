@@ -3,9 +3,7 @@ module SomaPixels(
 	output [15:0] soma
 );
 
-reg [4:0] i,j,somaAux, aux;
-
-	/*assign soma =    diff_pixel[0][0]
+	assign soma =    diff_pixel[0][0]
 						+ diff_pixel[0][1]
 						+ diff_pixel[0][2]
 						+ diff_pixel[0][3]
@@ -125,23 +123,6 @@ reg [4:0] i,j,somaAux, aux;
 						+ diff_pixel[10][7]
 						+ diff_pixel[10][8]
 						+ diff_pixel[10][9]
-						+ diff_pixel[10][10];*/
-assign soma = aux;
-initial
-begin
-	somaAux =0;
-end 						
-always@(diff_pixel)
-begin
-	
-	for(i = 0; i <11;i++)
-	begin
-		for(j = 0; j <11;j++)
-		begin
-		somaAux = somaAux + diff_pixel[i][j];
-		end
-	end
-	aux = somaAux;
-end
+						+ diff_pixel[10][10];
 
 endmodule

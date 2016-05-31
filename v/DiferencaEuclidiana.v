@@ -6,4 +6,4 @@ module DiferencaEuclidiana(
 
 assign diff = numero > template ? numero - template : template - numero;
 
-endmodule	
+endmodule

@@ -1,0 +1,33 @@
+module ProcessamentoDigito(
+	input  [7:0] numero[10:0][10:0],
+	output [3:0] digito
+);
+	
+	wire [15:0] v_diferenca[9:0];
+	wire [7:0] diff_pixel[9:0][10:0][10:0];
+		
+	Diferenca0 diferenca0(numero,diff_pixel[0]);
+	Diferenca1 diferenca1(numero,diff_pixel[1]);
+	Diferenca2 diferenca2(numero,diff_pixel[2]);
+	Diferenca3 diferenca3(numero,diff_pixel[3]);
+	Diferenca4 diferenca4(numero,diff_pixel[4]);
+	Diferenca5 diferenca5(numero,diff_pixel[5]);
+	Diferenca6 diferenca6(numero,diff_pixel[6]);
+	Diferenca7 diferenca7(numero,diff_pixel[7]);
+	Diferenca8 diferenca8(numero,diff_pixel[8]);
+	Diferenca9 diferenca9(numero,diff_pixel[9]);
+	
+	SomaPixels(diff_pixel[0],v_diferenca[0]);
+	SomaPixels(diff_pixel[1],v_diferenca[1]);
+	SomaPixels(diff_pixel[2],v_diferenca[2]);
+	SomaPixels(diff_pixel[3],v_diferenca[3]);
+	SomaPixels(diff_pixel[4],v_diferenca[4]);
+	SomaPixels(diff_pixel[5],v_diferenca[5]);
+	SomaPixels(diff_pixel[6],v_diferenca[6]);
+	SomaPixels(diff_pixel[7],v_diferenca[7]);
+	SomaPixels(diff_pixel[8],v_diferenca[8]);
+	SomaPixels(diff_pixel[9],v_diferenca[9]);
+	
+	MenorDistancia menorDistancia(v_diferenca, digito);
+	
+endmodule

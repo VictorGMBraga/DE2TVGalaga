@@ -29,5 +29,5 @@ module ProcessamentoDigito(
 	SomaPixels somaPixels9(diff_pixel[9],v_diferenca[9]);
 	
 	MenorDistancia menorDistancia(v_diferenca, digito);
-		
+	
 endmodule
