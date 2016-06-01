@@ -1,14 +1,14 @@
-Fitter Status : Successful - Tue May 31 09:55:31 2016
+Fitter Status : Successful - Tue May 31 17:35:27 2016
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : DE2_115_TV
 Top-level Entity Name : DE2_115_TV
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 79,010 / 114,480 ( 69 % )
-    Total combinational functions : 78,770 / 114,480 ( 69 % )
-    Dedicated logic registers : 1,043 / 114,480 ( < 1 % )
-Total registers : 1043
+Total logic elements : 39,261 / 114,480 ( 34 % )
+    Total combinational functions : 39,011 / 114,480 ( 34 % )
+    Dedicated logic registers : 1,047 / 114,480 ( < 1 % )
+Total registers : 1047
 Total pins : 436 / 529 ( 82 % )
 Total virtual pins : 0
 Total memory bits : 45,024 / 3,981,312 ( 1 % )

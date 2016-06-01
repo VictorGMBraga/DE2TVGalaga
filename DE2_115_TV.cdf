@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE115F29) Path("C:/Users/victo/Dropbox/GRYBOT/Galaga/ProtótipoTeste4/") File("DE2_115_TV.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE115F29) Path("C:/Users/victo/Dropbox/GRYBOT/Galaga/ProtótipoV3/") File("DE2_115_TV.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -1,5 +1,6 @@
 module ProcessamentoDigito(
 	input  [7:0] numero[10:0][10:0],
+	input flag,
 	output [3:0] digito
 );
 	
@@ -28,6 +29,6 @@ module ProcessamentoDigito(
 	SomaPixels somaPixels8(diff_pixel[8],v_diferenca[8]);
 	SomaPixels somaPixels9(diff_pixel[9],v_diferenca[9]);
 	
-	MenorDistancia menorDistancia(v_diferenca, digito);
+	MenorDistancia menorDistancia(v_diferenca, flag, digito);
 	
 endmodule

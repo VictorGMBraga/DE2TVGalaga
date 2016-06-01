@@ -742,8 +742,9 @@ I2C_AV_Config 	u1	(	//	Host Side
 reg flag_placar;
 reg [7:0] numero[7:1][10:0][10:0];
 wire [3:0] digito[7:1];
+wire flag;
 
-ProcessamentoPlacar proc_plac(numero, digito);
+ProcessamentoPlacar proc_plac(numero, flag || ~KEY[1], digito);
 
 SEG7_LUT	disp7	(HEX7, digito[7]);
 SEG7_LUT	disp6	(HEX6, digito[6]);
@@ -796,6 +797,11 @@ always@(*) begin
 	begin
 		numero[1][VGA_Y-38][VGA_X-216] = VGA_R;
 	end
+	
+	if(VGA_X == 227 && VGA_Y == 50)
+		flag = 1;
+	else
+		flag = 0;
 		
 end
 
