@@ -1,5 +1,5 @@
 Assembler report for DE2_115_TV
-Tue Jun 07 16:59:22 2016
+Tue Jun 07 18:47:58 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Jun 07 16:59:22 2016 ;
+; Assembler Status      ; Successful - Tue Jun 07 18:47:58 2016 ;
 ; Revision Name         ; DE2_115_TV                            ;
 ; Top-level Entity Name ; DE2_115_TV                            ;
 ; Family                ; Cyclone IV E                          ;
@@ -71,7 +71,7 @@ agreement for further details.
 +----------------+--------------------------------------------------------------------------+
 ; Device         ; EP4CE115F29C7                                                            ;
 ; JTAG usercode  ; 0xFFFFFFFF                                                               ;
-; Checksum       ; 0x00CE167D                                                               ;
+; Checksum       ; 0x00C0233C                                                               ;
 +----------------+--------------------------------------------------------------------------+
 
 
@@ -82,7 +82,7 @@ agreement for further details.
 +--------------------+----------------------------------------------------------------------+
 ; Device             ; EPCS64                                                               ;
 ; JTAG usercode      ; 0x00000000                                                           ;
-; Checksum           ; 0x7054A3E4                                                           ;
+; Checksum           ; 0x7069CC5A                                                           ;
 ; Compression Ratio  ; 3                                                                    ;
 +--------------------+----------------------------------------------------------------------+
 
@@ -93,14 +93,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Tue Jun 07 16:59:15 2016
+    Info: Processing started: Tue Jun 07 18:47:51 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE2_115_TV -c DE2_115_TV
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 822 megabytes
-    Info: Processing ended: Tue Jun 07 16:59:22 2016
+    Info: Peak virtual memory: 817 megabytes
+    Info: Processing ended: Tue Jun 07 18:47:58 2016
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:07
 

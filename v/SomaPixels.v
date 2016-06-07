@@ -9,7 +9,7 @@ reg [3:0] i, j;
 always@(posedge flag)
 begin
 	soma = 0;
-	for(i=2;i<9;i++)
+	for(i=2;i<8;i++)
 	begin
 		for(j=2;j<9;j++)
 		begin

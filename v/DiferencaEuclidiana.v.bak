@@ -1,5 +1,0 @@
-function DiferencaEuclidiana([7:0] numero, [7:0] template);
-
-DiferencaEuclidiana = numero > template ? numero - template : template - numero;
-
-endfunction
