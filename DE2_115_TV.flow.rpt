@@ -1,5 +1,5 @@
 Flow report for DE2_115_TV
-Tue May 31 17:36:00 2016
+Tue Jun 07 16:34:58 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue May 31 17:35:42 2016       ;
+; Flow Status                        ; Successful - Tue Jun 07 16:34:33 2016       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; DE2_115_TV                                  ;
 ; Top-level Entity Name              ; DE2_115_TV                                  ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 39,261 / 114,480 ( 34 % )                   ;
-;     Total combinational functions  ; 39,011 / 114,480 ( 34 % )                   ;
-;     Dedicated logic registers      ; 1,047 / 114,480 ( < 1 % )                   ;
-; Total registers                    ; 1047                                        ;
+; Total logic elements               ; 17,472 / 114,480 ( 15 % )                   ;
+;     Total combinational functions  ; 17,235 / 114,480 ( 15 % )                   ;
+;     Dedicated logic registers      ; 1,187 / 114,480 ( 1 % )                     ;
+; Total registers                    ; 1187                                        ;
 ; Total pins                         ; 436 / 529 ( 82 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 45,024 / 3,981,312 ( 1 % )                  ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/31/2016 17:29:32 ;
+; Start date & time ; 06/07/2016 16:31:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE2_115_TV          ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 176507744242161.146472657203872       ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 176507744242161.146532790103276       ; --            ; --          ; --         ;
 ; ENABLE_SIGNALTAP                    ; Off                                   ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
@@ -101,11 +101,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:21     ; 1.0                     ; 1163 MB             ; 00:01:41                           ;
-; Fitter                    ; 00:04:28     ; 1.0                     ; 1858 MB             ; 00:06:51                           ;
-; Assembler                 ; 00:00:08     ; 1.0                     ; 878 MB              ; 00:00:07                           ;
-; TimeQuest Timing Analyzer ; 00:00:17     ; 1.2                     ; 1168 MB             ; 00:00:16                           ;
-; Total                     ; 00:06:14     ; --                      ; --                  ; 00:08:55                           ;
+; Analysis & Synthesis      ; 00:00:50     ; 1.0                     ; 1064 MB             ; 00:01:09                           ;
+; Fitter                    ; 00:01:47     ; 1.0                     ; 1724 MB             ; 00:02:33                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 823 MB              ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:24     ; 1.1                     ; 1061 MB             ; 00:00:11                           ;
+; Total                     ; 00:03:07     ; --                      ; --                  ; 00:03:59                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
